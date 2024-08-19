@@ -1,13 +1,17 @@
 import '../Styles/App.css'
-import { Button } from "flowbite-react";
+import { CgGym } from "react-icons/cg";
+import Login from '../views/Login';
 
 function App() {
 
   return (
-    <>
-      <h1 className="text-cyan-600 text-3xl font-bold underline" >Hello World.</h1>
-      <Button>Click me</Button>
-    </>
+    <div className='bg-slate-700 min-h-[100vh]'>
+      <nav className='h-14 flex justify-center pt-1' >
+        <CgGym className='h-full w-full text-red-500' />
+      </nav>
+      <Login/>
+
+    </div>
   )
 }
 
