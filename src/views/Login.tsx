@@ -1,32 +1,30 @@
-import { Button, Card, Checkbox, Label, TextInput } from "flowbite-react";
-
 const Login = () => {
   return (
-    <Card className="w-[50vh] m-auto mt-20 bg-red-500 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-20 border-none">
-      <h1 className='flex flex-col justify-center text-3xl' >Create a new account 
-        <span className='text-sm'>Already have an account? <a href='#' className='text-red-500'>Sign in</a></span>
-      </h1>
-      
-      <form className="flex flex-col gap-4">
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="email1" value="Your email" />
+    <div className="custom-container">
+      <input type="checkbox" id="custom-signup_toggle" />
+      <form className="custom-form">
+          <div className="custom-form_front">
+              <div className="custom-form_details">Login</div>
+              <input placeholder="Username" className="custom-input" type="text"/>
+              <input placeholder="Password" className="custom-input" type="text"/>
+              <button className="custom-btn">Login</button>
+              <span className="custom-switch">Don't have an account? 
+                  <label className="custom-signup_tog" htmlFor="custom-signup_toggle">Sign Up</label>
+              </span>
           </div>
-          <TextInput id="email1" type="email" placeholder="name@mail.com" required />
-        </div>
-        <div>
-          <div className="mb-2 block">
-            <Label htmlFor="password1" value="Your password" />
+          <div className="custom-form_back">
+              <div className="custom-form_details">SignUp</div>
+              <input placeholder="Firstname" className="custom-input" type="text"/>
+              <input placeholder="Username" className="custom-input" type="text"/>
+              <input placeholder="Password" className="custom-input" type="text"/>
+              <input placeholder="Confirm Password" className="custom-input" type="text"/>
+              <button className="custom-btn">Signup</button>
+              <span className="custom-switch">Already have an account? 
+                  <label className="custom-signup_tog" htmlFor="custom-signup_toggle">Sign In</label>
+              </span>
           </div>
-          <TextInput id="password1" type="password" required />
-        </div>
-        <div className="flex items-center gap-2">
-          <Checkbox id="remember" />
-          <Label htmlFor="remember">Remember me</Label>
-        </div>
-        <Button type="submit">Submit</Button>
       </form>
-    </Card>
+    </div>
   )
 }
 
